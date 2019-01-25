@@ -25,10 +25,10 @@ function otherLanguageReadTime(string) {
   };
 }
 
-function wordsReadTime(string) {
+function wordsReadTime(string, wordsPerMin = WORDS_PER_MIN) {
   const { otherLanguageTime, formattedString } = otherLanguageReadTime(string);
   const count = wordsCount(formattedString);
-  const wordTime = count / WORDS_PER_MIN;
+  const wordTime = count / wordsPerMin;
   return otherLanguageTime + wordTime;
 }
 

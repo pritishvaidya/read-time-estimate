@@ -4,7 +4,7 @@
  *  Get Image Read Time from a string.
  *
  * */
-import { IMAGE_READ_TIME } from '../constants';
+import { IMAGE_READ_TIME, IMAGE_TAGS } from '../constants';
 
 function imageCount(imageTags, string) {
   const combinedImageTags = imageTags.join('|');
@@ -13,15 +13,15 @@ function imageCount(imageTags, string) {
   return (string.match(reg) || []).length;
 }
 
-function imageReadTime(tags, string) {
+function imageReadTime(customImageTime = IMAGE_READ_TIME, tags = IMAGE_TAGS, string) {
   let readTime = 0;
   const count = imageCount(tags, string);
 
   if (count > 10) {
-    readTime = ((count / 2) * (IMAGE_READ_TIME + 3)) + (count - 10) * 3; // n/2(a+b) + 3 sec/image
+    readTime = ((count / 2) * (customImageTime + 3)) + (count - 10) * 3; // n/2(a+b) + 3 sec/image
   } else {
-    const firstElement = (count / 2) * (2 * IMAGE_READ_TIME + (1 - count)); // n/2[2a+(n-1)d]
-    readTime = (count / 2) * (firstElement + IMAGE_READ_TIME); // n/2(a+b)
+    const firstElement = (count / 2) * (2 * customImageTime + (1 - count)); // n/2[2a+(n-1)d]
+    readTime = (count / 2) * (firstElement + customImageTime); // n/2(a+b)
   }
   return readTime;
 }
