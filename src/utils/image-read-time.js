@@ -1,5 +1,5 @@
 /**
- *  String#imageReadTime() -> Number
+ *  String#imageReadTime() -> { time, count }
  *
  *  Get Image Read Time from a string.
  *
@@ -14,16 +14,18 @@ function imageCount(imageTags, string) {
 }
 
 function imageReadTime(customImageTime = IMAGE_READ_TIME, tags = IMAGE_TAGS, string) {
-  let readTime = 0;
+  let seconds = 0;
   const count = imageCount(tags, string);
 
   if (count > 10) {
-    readTime = ((count / 2) * (customImageTime + 3)) + (count - 10) * 3; // n/2(a+b) + 3 sec/image
+    seconds = ((count / 2) * (customImageTime + 3)) + (count - 10) * 3; // n/2(a+b) + 3 sec/image
   } else {
-    const firstElement = (count / 2) * (2 * customImageTime + (1 - count)); // n/2[2a+(n-1)d]
-    readTime = (count / 2) * (firstElement + customImageTime); // n/2(a+b)
+    seconds = (count / 2) * (2 * customImageTime + (1 - count)); // n/2[2a+(n-1)d]
   }
-  return readTime;
+  return {
+    time: seconds / 60,
+    count,
+  };
 }
 
 export { imageCount };

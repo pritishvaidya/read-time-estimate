@@ -18,12 +18,12 @@ describe('Testing Utility functions', () => {
 
     it('should be able return read time if count is greater than 10', () => {
       const testString = '<Image/><Image/><Image/><Image/><Image/><img/><img/><img/><img/><img/><img/>';
-      expect(imageReadTime(IMAGE_READ_TIME, IMAGE_TAGS, testString)).toBeNumber();
+      expect(imageReadTime(IMAGE_READ_TIME, IMAGE_TAGS, testString)).toBeObject();
     });
 
     it('should be able return read time if count is less than 10', () => {
       const testString = '<Image/><Image/><Image/>';
-      expect(imageReadTime(IMAGE_READ_TIME, IMAGE_TAGS, testString)).toBeNumber();
+      expect(imageReadTime(IMAGE_READ_TIME, IMAGE_TAGS, testString)).toBeObject();
     });
   });
 
@@ -59,14 +59,14 @@ describe('Testing Utility functions', () => {
       const outputString = 'Test String';
       expect(
         otherLanguageReadTime(testString),
-      ).toEqual({ otherLanguageTime: 5 / CHINESE_KOREAN_READ_TIME, formattedString: outputString });
+      ).toEqual({ count: 5, time: 5 / CHINESE_KOREAN_READ_TIME, formattedString: outputString });
     });
 
     it('should be calculate words read time', () => {
       const testString = 'Test String';
       expect(
         wordsReadTime(testString),
-      ).toBeNumber();
+      ).toBeObject();
     });
   });
 });
