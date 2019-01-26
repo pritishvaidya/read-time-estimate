@@ -23,10 +23,12 @@ function readTime(
   return {
     humanizedDuration: humanizeTime(imageTime + wordTime),
     duration: imageTime + wordTime,
-    totalImages: imageCount,
     totalWords: wordCount,
-    otherLanguageTime,
+    wordTime,
+    totalImages: imageCount,
+    imageTime,
     otherLanguageTimeCharacters: characterCount,
+    otherLanguageTime,
   };
 }
 
