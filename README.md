@@ -55,3 +55,11 @@ const {
 #### Medium
  - [Help](https://help.medium.com/hc/en-us/articles/214991667-Read-time)
  - [Blog](https://blog.medium.com/read-time-and-you-bc2048ab620c)
+
+## Contribution
+
+ - [@pritishvaidya](mailto:pritishvaidya94@gmail.com) The main author.
+
+## Questions
+
+ Feel free to [contact me](mailto:pritishvaidya94@gmail.co) or [create an issue](https://github.com/pritishvaidya/read-time-estimate/issues/new)
