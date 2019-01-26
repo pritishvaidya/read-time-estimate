@@ -1,3 +1,4 @@
+import humanizeTime from '../src/utils/humanize-time';
 import imageReadTime, { imageCount } from '../src/utils/image-read-time';
 import stripTags from '../src/utils/strip-tags';
 import stripWhitespace from '../src/utils/strip-whitespace';
@@ -5,6 +6,32 @@ import wordsReadTime, { wordsCount, otherLanguageReadTime } from '../src/utils/w
 import { CHINESE_KOREAN_READ_TIME, IMAGE_READ_TIME, IMAGE_TAGS } from '../src/constants';
 
 describe('Testing Utility functions', () => {
+  describe('humanize-time utility method', () => {
+    it('should be able humanize from a string if time is less than half a minute', () => {
+      const testString = 0.4;
+      expect(humanizeTime(testString)).toBeString();
+    });
+
+    it('should be able humanize from a string if time is greater than half a minute', () => {
+      const testString = 0.6;
+      expect(humanizeTime(testString)).toBeString();
+    });
+
+    it('should be able humanize from a string if time is greater than one and a half minutes', () => {
+      const testString = 12;
+      expect(humanizeTime(testString)).toBeString();
+    });
+  });
+
+  describe('strip-tags utility method', () => {
+    const testString = '<div>Test String</div>';
+    const outputString = 'Test String';
+    it('should be able strip tags', () => {
+      expect(stripTags(testString)).toBe(outputString);
+    });
+  });
+
+
   describe('image-read-time utility method', () => {
     it('should be able to count nil image tags', () => {
       const testString = '';
