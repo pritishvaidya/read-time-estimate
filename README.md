@@ -1,4 +1,4 @@
-# read-time-estimate [![Build Status](https://travis-ci.com/pritishvaidya/read-time-estimate.svg?branch=master)](https://travis-ci.com/pritishvaidya/read-time-estimate) [![Maintainability](https://api.codeclimate.com/v1/badges/c5858d4d925014c4c1a7/maintainability)](https://codeclimate.com/github/pritishvaidya/read-time-estimate/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/c5858d4d925014c4c1a7/test_coverage)](https://codeclimate.com/github/pritishvaidya/read-time-estimate/test_coverage) [![npm version](https://badge.fury.io/js/read-time-estimate.svg)](https://badge.fury.io/js/read-time-estimate) [![npm downloads](https://img.shields.io/npm/dt/read-time-estimate.svg)](https://npm-stat.com/charts.html?package=read-time-estimate&from=2018-02-17&to=2018-12-28)
+# read-time-estimate [![Build Status](https://travis-ci.com/pritishvaidya/read-time-estimate.svg?branch=master)](https://travis-ci.com/pritishvaidya/read-time-estimate) [![CodeFactor](https://www.codefactor.io/repository/github/pritishvaidya/read-time-estimate/badge/master)](https://www.codefactor.io/repository/github/pritishvaidya/read-time-estimate/overview/master) [![Maintainability](https://api.codeclimate.com/v1/badges/c5858d4d925014c4c1a7/maintainability)](https://codeclimate.com/github/pritishvaidya/read-time-estimate/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/c5858d4d925014c4c1a7/test_coverage)](https://codeclimate.com/github/pritishvaidya/read-time-estimate/test_coverage) [![npm version](https://badge.fury.io/js/read-time-estimate.svg)](https://badge.fury.io/js/read-time-estimate) [![npm downloads](https://img.shields.io/npm/dt/read-time-estimate.svg)](https://npm-stat.com/charts.html?package=read-time-estimate&from=2018-02-17&to=2018-12-28)
 
 > A more accurate Medium like read time estimate with images in progression and Chinese / Japanese / Korean character support.
 
@@ -62,4 +62,4 @@ const {
 
 ## Questions
 
- Feel free to [contact me](mailto:pritishvaidya94@gmail.co) or [create an issue](https://github.com/pritishvaidya/read-time-estimate/issues/new)
+ Feel free to [contact me](mailto:pritishvaidya94@gmail.com) or [create an issue](https://github.com/pritishvaidya/read-time-estimate/issues/new)
