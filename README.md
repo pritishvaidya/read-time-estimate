@@ -2,6 +2,11 @@
 
 > A more accurate Medium like read time estimate with images in progression and Chinese / Japanese / Korean character support.
 
+## Features
+- Calculates read time of images in decreasing progression with ability to provide custom image tags
+- Calculates read time of the Chinese / Japanese / Korean characters separately
+- Removes unwanted html tags to calculate read time more efficiently
+
 ## Install
 
 ```
@@ -31,10 +36,10 @@ const {
 | Variable  | Defaults | Description  |
 | :------------ | ---------------:| :---------------|
 | string | required | Input String |
-| customWordTime | 275 | Words per Minute |
-| customImageTime | 12 | Image Read Time (in seconds) |
-| chineseKoreanReadTime | 500 | Characters per Minute |
-| imageTags | `['img', 'Image']` | Image tags to match in the input string |
+| customWordTime | 275 | Speed of reading the text in Words per Minute |
+| customImageTime | 12 | Speed of reading the image in seconds |
+| chineseKoreanReadTime | 500 | Speed of reading the Chinese / Korean / Japanese characters in Characters per Minute |
+| imageTags | `['img', 'Image']` | Custom Image tags to parse in the input string |
 
 
 ### Output
