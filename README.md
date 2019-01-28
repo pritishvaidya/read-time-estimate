@@ -24,10 +24,12 @@ const string = `<img src="test.png"/><div class="wrapper">
 const {
     humanizedDuration, // 'less than a minute'
     duration, // 0.23272727272727273
-    totalImages, // 1
     totalWords, // 9
-    otherLanguageTime, // 0.012
+    wordTime, // 0.03272727272727273
+    totalImages, // 1
+    imageTime, //  0.2
     otherLanguageTimeCharacters, // 6
+    otherLanguageTime, // 0.012
 } = readTimeEstimate(string, 275, 12, 500, ['img', 'Image'])
 ```
 
