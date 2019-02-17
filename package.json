@@ -1,9 +1,9 @@
 {
   "name": "read-time-estimate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Medium like read time estimate with more accuracy and customisable values",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/read-time-estimate.cjs.js",
+  "module": "dist/read-time-estimate.esm.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "prepublishOnly": "run-s build",
