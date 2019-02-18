@@ -3,7 +3,7 @@
 > A more accurate Medium like read time estimate with images in progression and Chinese / Japanese / Korean character support.
 
 ## Features
-- Calculates read time of images in decreasing progression with ability to provide custom image tags
+- Calculates read time of images in decreasing progression with ability to provide custom image tags (Example - 12 seconds for the first image, 11 for the second, until images counted at 3 seconds)
 - Calculates read time of the Chinese / Japanese / Korean characters separately
 - Removes unwanted html tags to calculate read time more efficiently
 
