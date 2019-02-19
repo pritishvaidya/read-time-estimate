@@ -35,27 +35,27 @@ const {
 
 ### Input
 
-| Variable  | Defaults | Description  |
-| :------------ | ---------------:| :---------------|
-| string | required | Input String |
-| customWordTime | 275 | Speed of reading the text in Words per Minute |
-| customImageTime | 12 | Speed of reading the image in seconds |
-| chineseKoreanReadTime | 500 | Speed of reading the Chinese / Korean / Japanese characters in Characters per Minute |
-| imageTags | `['img', 'Image']` | Custom Image tags to parse in the input string |
+| Variable  | Defaults | Type | Description  |
+| :------------ | ---------------:|---------------:|:---------------|
+| string | required | string | Input String |
+| customWordTime | 275 | number | Speed of reading the text in Words per Minute |
+| customImageTime | 12 | number | Speed of reading the image in seconds |
+| chineseKoreanReadTime | 500 | number | Speed of reading the Chinese / Korean / Japanese characters in Characters per Minute |
+| imageTags | `['img', 'Image']` | array | Custom Image tags to parse in the input string |
 
 
 ### Output
 
-| Variable  | Description  |
-| :------------ | :---------------|
-| humanizedDuration | Humanized Duration for the input string |
-| duration | Actual Duration of the input string (in minutes) |
-| totalWords | Number of words in the input string |
-| wordTime | Read Time of the words in the input string |
-| totalImages | Number of images in input string |
-| imageTime | Read Time of the images in the input string |
-| otherLanguageTimeCharacters | Chinese / Japanese / Korean language characters count |
-| otherLanguageTime | Read Time of the Chinese / Japanese / Korean in the input string |
+| Variable  | Type | Description  |
+| :------------ | ---------------: | :---------------|
+| humanizedDuration | string | Humanized Duration for the input string |
+| duration | number | Actual Duration of the input string (in minutes) |
+| totalWords | number | Number of words in the input string |
+| wordTime | number | Read Time of the words in the input string (in minutes) |
+| totalImages | number | Number of images in input string |
+| imageTime | number | Read Time of the images in the input string (in minutes) |
+| otherLanguageTimeCharacters | number | Chinese / Japanese / Korean language characters count |
+| otherLanguageTime | number | Read Time of the Chinese / Japanese / Korean in the input string (in minutes) |
 
 ### References 
 
