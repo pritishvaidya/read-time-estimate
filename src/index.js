@@ -20,14 +20,14 @@ function readTime(
     wordTime,
     wordCount,
     paragraphCount,
-    sentenseCount,
+    sentenceCount,
   } = wordsReadTime(strippedString, customWordTime);
   return {
     humanizedDuration: humanizeTime(imageTime + wordTime),
     duration: imageTime + wordTime,
     totalWords: wordCount,
     totalParagraphs: paragraphCount,
-    totalSentense: sentenseCount,
+    totalSentence: sentenceCount,
     wordTime,
     totalImages: imageCount,
     imageTime,
