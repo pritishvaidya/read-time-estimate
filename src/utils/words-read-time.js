@@ -14,7 +14,7 @@ function paragraphsCount(string) {
     return (string.match(/\n+/g) || []).length + 1;
 }
 
-function sentensesCount(string) {
+function sentencesCount(string) {
     return (string.match(/[.?!…]+./g) || []).length + 1;
 }
 
@@ -40,7 +40,7 @@ function wordsReadTime(string, wordsPerMin = WORDS_PER_MIN) {
     } = otherLanguageReadTime(string);
     const wordCount = wordsCount(formattedString);
     const paragraphCount = paragraphsCount(formattedString);
-    const sentenseCount = sentensesCount(formattedString);
+    const sentenceCount = sentencesCount(formattedString);
     const wordTime = wordCount / wordsPerMin;
     return {
         charachterCount,
@@ -48,7 +48,7 @@ function wordsReadTime(string, wordsPerMin = WORDS_PER_MIN) {
         wordTime,
         wordCount,
         paragraphCount,
-        sentenseCount,
+        sentenceCount,
     };
 }
 
