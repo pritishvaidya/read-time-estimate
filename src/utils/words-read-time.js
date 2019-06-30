@@ -7,9 +7,15 @@
 import { WORDS_PER_MIN, CHINESE_KOREAN_READ_TIME } from '../constants';
 
 function wordsCount(string) {
-  const pattern = '\\w+';
-  const reg = new RegExp(pattern, 'g');
-  return (string.match(reg) || []).length;
+    return (string.replace(/['";:,.?¿\-!¡]+/g, '').match(/\S+/g) || []).length;
+}
+
+function paragraphsCount(string) {
+    return (string.match(/\n+/g) || []).length + 1;
+}
+
+function sentensesCount(string) {
+    return (string.match(/[.?!…]+./g) || []).length + 1;
 }
 
 // Chinese / Japanese / Korean
@@ -27,19 +33,23 @@ function otherLanguageReadTime(string) {
 }
 
 function wordsReadTime(string, wordsPerMin = WORDS_PER_MIN) {
-  const {
-    count: characterCount,
-    time: otherLanguageTime,
-    formattedString,
-  } = otherLanguageReadTime(string);
-  const wordCount = wordsCount(formattedString);
-  const wordTime = wordCount / wordsPerMin;
-  return {
-    characterCount,
-    otherLanguageTime,
-    wordTime,
-    wordCount,
-  };
+    const {
+        count: charachterCount,
+        time: otherLanguageTime,
+        formattedString,
+    } = otherLanguageReadTime(string);
+    const wordCount = wordsCount(formattedString);
+    const paragraphCount = paragraphsCount(formattedString);
+    const sentenseCount = sentensesCount(formattedString);
+    const wordTime = wordCount / wordsPerMin;
+    return {
+        charachterCount,
+        otherLanguageTime,
+        wordTime,
+        wordCount,
+        paragraphCount,
+        sentenseCount,
+    };
 }
 
 export { wordsCount, otherLanguageReadTime };
