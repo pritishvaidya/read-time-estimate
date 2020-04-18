@@ -14,7 +14,7 @@ function wordsCount(string) {
 
 // Chinese / Japanese / Korean
 function otherLanguageReadTime(string) {
-  const pattern = '[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff66-\uff9f]';
+  const pattern = '[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff66-\uff9f\u3131-\u314E\u314F-\u3163\uAC00-\uD7A3]';
   const reg = new RegExp(pattern, 'g');
   const count = (string.match(reg) || []).length;
   const time = count / CHINESE_KOREAN_READ_TIME;
