@@ -57,6 +57,10 @@ const {
 | otherLanguageTimeCharacters | number | Chinese / Japanese / Korean language characters count |
 | otherLanguageTime | number | Read Time of the Chinese / Japanese / Korean in the input string (in minutes) |
 
+## Gatsby Plugin
+[gatsby-read-time-estimate](https://github.com/pritishvaidya/gatsby-read-time-estimate)
+
+
 ### References 
 
 #### Medium
